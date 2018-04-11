@@ -42,4 +42,12 @@ class ItemsPool {
         println("ItemsPool: $this")
         pool.forEach{it -> println("Weight: ${it.weight} Value: ${it.value}")}
     }
+
+    fun setPool(itemlist: MutableList<Item>){
+        this.pool = itemlist
+    }
+
+    fun getPool(): MutableList<Item>{
+        return this.pool
+    }
 }

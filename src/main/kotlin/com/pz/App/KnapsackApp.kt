@@ -5,6 +5,7 @@ import com.pz.Models.Item
 import com.pz.Models.ItemsPool
 import com.pz.Models.Population
 import com.pz.Services.GeneticAlgorithm
+import com.pz.Services.ItemsPoolService
 import com.pz.Styles.Styles
 import com.pz.Views.MainScreen
 import tornadofx.*
@@ -31,6 +32,10 @@ fun main(args: Array<String>) {
     itemsPool.addItem(Item(10.0,18.0))
     itemsPool.addItem(Item(5.0,25.0))
     itemsPool.addItem(Item(1.0,3.05))
+
+    val itemsService = ItemsPoolService()
+    itemsService.saveToFile(itemsPool)
+    itemsService.readFromFile(itemsPool)
 
     val population = Population(50,20.0,1,itemsPool)
 

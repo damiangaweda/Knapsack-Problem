@@ -62,10 +62,6 @@ class GeneticAlgorithm {
         return true
     }
 
-    //TODO addToHistory nie utrzymuje 10 elementów w historii - solveed
-    //TODO znaleźć przyczynę złego wyliczania score
-    //TODO addToHistory nie przepisuje indeksów
-
     fun addToHistory(knapsack: Knapsack)
     {
 

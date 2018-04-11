@@ -116,6 +116,7 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
             subject = mutate(subject)
             speciments.add(subject)
             speciments[i].rate()
+            println("Score tst: ${speciments[i]}")
         }
     }
 

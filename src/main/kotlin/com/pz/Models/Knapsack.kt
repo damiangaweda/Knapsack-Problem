@@ -30,6 +30,7 @@ class Knapsack constructor(val maxCapacity: Double)
             }
         }
 
+        items.sortBy { item: Item -> item.weight }
         rate()
     }
 
