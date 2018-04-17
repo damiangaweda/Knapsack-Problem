@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <Label layoutX="74.0" layoutY="29.0" prefHeight="50.0" prefWidth="253.0" text="Knapsack problem app">
+               <font>
+                  <Font name="Cambria Math" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="startButton" layoutX="125.0" layoutY="353.0" mnemonicParsing="false" onAction="#startApplication" prefHeight="50.0" prefWidth="150.0" text="Start" />
+            <Button fx:id="itemDatabaseButton" layoutX="125.0" layoutY="434.0" mnemonicParsing="false" onAction="#openItemDatabase" prefHeight="50.0" prefWidth="150.0" text="Item Management" />
+            <Button fx:id="exitButton" layoutX="125.0" layoutY="520.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="50.0" prefWidth="150.0" text="Exit" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

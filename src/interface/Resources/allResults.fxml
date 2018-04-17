@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.allResultsController">
+
+    <Label alignment="CENTER" layoutX="135.0" layoutY="1.0" text="All Results">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+
+    <TableView fx:id="resultTable" editable="true" layoutX="25.0" layoutY="28.0" prefHeight="417.0" prefWidth="302.0">
+        <columns>
+            <TableColumn fx:id="population" maxWidth="150.0" minWidth="100.0" prefWidth="150.0" resizable="false" text="Population" />
+            <TableColumn fx:id="value" maxWidth="75.0" minWidth="50.0" prefWidth="75.0" resizable="false" text="Value" />
+            <TableColumn fx:id="weight" maxWidth="75.0" minWidth="50.0" prefWidth="75.0" resizable="false" text="Weight" />
+        </columns>
+    </TableView>
+
+    <Button fx:id="returnButton" layoutX="126.0" layoutY="456.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="100.0" text="Return" />
+</AnchorPane>
