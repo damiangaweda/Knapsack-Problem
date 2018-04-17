@@ -31,6 +31,13 @@ class Knapsack constructor(val maxCapacity: Double)
         }
 
         items.sortBy { item: Item -> item.weight }
+
+
+        //println("new one")
+        //items.forEach { e -> println(e) }
+        //Thread.sleep(10000)
+
+
         rate()
     }
 
@@ -71,8 +78,13 @@ class Knapsack constructor(val maxCapacity: Double)
         return "TotalWeight: $totalWeight TotalValue: $totalValue AdaptationScore: $adaptationScore"
     }
 
-    fun equals(other: Knapsack): Boolean {
-        return this.totalWeight == other.totalWeight && this.totalValue == other.totalValue && this.adaptationScore == other.adaptationScore
+    override fun equals(other: Any?): Boolean {
+        other as Knapsack
+        return this.totalWeight == other.totalWeight && this.totalValue == other.totalValue
+    }
+
+    fun print() {
+        items.forEach { e -> println(e) }
     }
 
 }

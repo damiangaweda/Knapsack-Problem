@@ -61,18 +61,34 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
 
     }
 
+
+    /**
+     * TODO Losowanie pivotu
+     *
+     * Problem --> 1 plecak 11 indeksów; 2 plecak 7 indexów
+     *
+     * Rozwiązanie -> losowanie pivotu z 1, losowanie pivotu z 2
+     *                od pivotu 1, dodawać itemy z 2 aż do skończenia miejsca
+     *
+     *                Analogicznie dla drugiego
+     *
+     *
+     * Dodać dodawanie najlżejszych przedmiotów na samym końcu
+     */
+
     fun crossover(A: Knapsack, B: Knapsack): Knapsack
     {
-        val middleIndexA: Int = A.items.size/2
-        val middleIndexB: Int = B.items.size/2
+        val middleIndexA: Int = (0..A.items.size).random()
+        var middleIndexB: Int = (0..B.items.size).random()
 
         val C = Knapsack(A.maxCapacity)
 
-        for (i in 0 until middleIndexA)
+        for(i in 0 until middleIndexA)
             C.addItem(A.items[i])
 
-        for (i in middleIndexB until B.items.size)
-            C.addItem(B.items[i])
+        while(C.totalWeight < C.maxCapacity && middleIndexB < B.items.size){
+            C.addItem(B.items[middleIndexB++])
+        }
 
         return  C
     }
@@ -116,8 +132,13 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
             subject = mutate(subject)
             speciments.add(subject)
             speciments[i].rate()
-            println("Score tst: ${speciments[i]}")
         }
+    }
+
+    fun identicalPercentage(): Int
+    {
+        val best = findBest()
+        return 100*Collections.frequency(speciments,best)/maxSize
     }
 
 }

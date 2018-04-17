@@ -1,9 +1,9 @@
 package com.pz.Models
 
-class Item constructor(var weight: Double, var value: Double)
+class Item constructor(var name: String, var weight: Double, var value: Double)
 {
     override fun toString() : String
     {
-        return "Weight: $weight Value: $value"
+        return "Name: $name Weight: $weight Value: $value"
     }
 }
