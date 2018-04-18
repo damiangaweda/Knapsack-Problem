@@ -38,7 +38,7 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
     }
 
     fun printPopulation(){
-        println("Population: $this")
+        println("\n Population: $this")
         speciments.forEach { it -> println(it.toString()) }
     }
 
@@ -86,7 +86,11 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
         for(i in 0 until middleIndexA)
             C.addItem(A.items[i])
 
-        while(C.totalWeight < C.maxCapacity && middleIndexB < B.items.size){
+        //while ( middleIndexB < B.items.size && (C.totalWeight + B.items[middleIndexB].weight) <= C.maxCapacity ){
+        //   C.addItem(B.items[middleIndexB++])
+        //}
+
+        while ( middleIndexB < B.items.size && C.totalWeight <= C.maxCapacity ){
             C.addItem(B.items[middleIndexB++])
         }
 

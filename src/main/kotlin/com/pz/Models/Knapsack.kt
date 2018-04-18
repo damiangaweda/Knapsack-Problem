@@ -61,17 +61,13 @@ class Knapsack constructor(val maxCapacity: Double)
     }
 
     fun rate(){
-        var penaltyPoints = 0.0
-        if(totalWeight > maxCapacity)
-            penaltyPoints = Math.abs((totalWeight - maxCapacity)/maxCapacity)*2
-        if(totalWeight < maxCapacity)
-            penaltyPoints = Math.abs((totalWeight - maxCapacity)/maxCapacity)
+        adaptationScore = totalValue/maxCapacity
+        val difference = maxCapacity - totalWeight
+        if(difference < 0)
+            adaptationScore += difference
+        if(difference == 0.0)
+            adaptationScore += totalValue/10
 
-        adaptationScore = if((totalWeight - maxCapacity) != 0.0)
-            (totalValue/Math.abs(totalWeight - maxCapacity)) - penaltyPoints
-        else {
-            totalValue + 5
-        }
     }
 
     override fun toString(): String {
@@ -85,6 +81,13 @@ class Knapsack constructor(val maxCapacity: Double)
 
     fun print() {
         items.forEach { e -> println(e) }
+    }
+
+    fun set(other: Knapsack) {
+        this.adaptationScore = other.adaptationScore
+        this.items = other.items
+        this.totalValue = other.totalValue
+        this.totalWeight = other.totalWeight
     }
 
 }

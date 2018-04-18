@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b5c4952-7fb2-4672-9623-18a70e2b5720" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Item.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Knapsack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Knapsack.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Population.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Population.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt" afterDir="false" />
@@ -26,7 +23,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="595">
               <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
             </state>
           </provider>
@@ -36,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Item.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -44,7 +41,7 @@
       <file leaf-file-name="ItemsPool.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/ItemsPool.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
+            <state relative-caret-position="731">
               <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
             </state>
           </provider>
@@ -53,17 +50,8 @@
       <file leaf-file-name="Population.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Population.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7344">
-              <caret line="432" selection-start-line="432" selection-end-line="432" />
+            <state relative-caret-position="1866">
+              <caret line="133" column="30" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -80,7 +68,7 @@
       <file leaf-file-name="ItemsPoolService.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/ItemsPoolService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="431">
               <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <element signature="e#25#231#0" expanded="true" />
@@ -89,20 +77,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnapsackApp.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KnapsackApp.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            <state relative-caret-position="425">
+              <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Knapsack.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Knapsack.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Knapsack.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+            <state relative-caret-position="423">
+              <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -110,8 +98,8 @@
       <file leaf-file-name="GeneticAlgorithm.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+            <state relative-caret-position="501">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
               <folding>
                 <element signature="e#25#86#0" expanded="true" />
               </folding>
@@ -139,6 +127,8 @@
       <find>score</find>
       <find>kotlin</find>
       <find>eq</find>
+      <find>printPop</find>
+      <find>rate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/ItemsPool.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Services/ItemsPoolService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Item.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Population.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Knapsack.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt" />
       </list>
     </option>
   </component>
@@ -198,8 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,7 +259,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,14 +385,16 @@
       <workItem from="1523951887693" duration="1240000" />
       <workItem from="1523957511894" duration="219000" />
       <workItem from="1523964541694" duration="4719000" />
+      <workItem from="1524039118078" duration="3775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50983000" />
+    <option name="totallyTimeSpent" value="54758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -414,12 +406,13 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.47396386" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32837406" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16041666" />
       <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -432,7 +425,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,8 +719,56 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/Randomizer.kt" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="595">
           <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/ItemsPool.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Item.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/ItemsPoolService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#25#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="432" selection-start-line="432" selection-end-line="432" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <element signature="e#25#86#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,65 +779,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7344">
-          <caret line="432" selection-start-line="432" selection-end-line="432" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/ItemsPool.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/ItemsPoolService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="e#25#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Item.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Population.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Services/GeneticAlgorithm.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-          <folding>
-            <element signature="e#25#86#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1866">
+          <caret line="133" column="30" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/Models/Knapsack.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/pz/App/KnapsackApp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        <state relative-caret-position="423">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
         </state>
       </provider>
     </entry>
