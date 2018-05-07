@@ -2,6 +2,9 @@ package com.pz.JavaFX.Controllers;
 
 import com.pz.Models.Item;
 import com.pz.Models.ItemsPool;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,18 +21,26 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class KnapsackController implements Initializable {
-
-    private Double knapsackSize;
-
+    //  FXML Interface
+//  Buttons
     @FXML private Button addItemButton, removeItemButton;
     @FXML private Button calculateButton, resetButton, returnButton;
+    //  Gen. Algorithm Settings
+    @FXML private TextField populationSizeField;
+    @FXML private Slider mutationSlider, targetIdenticalSlider;
     @FXML private TextField knapsackCapacityField;
+    @FXML private Label mutationChanceLabel, targetIdenticalLabel;
 
+    //  Selected items summary
+    @FXML private Label totalCount, totalValue, totalWeight;
+
+    //  Tables
     @FXML private TableView<Item> itemTable, selectedItemTable;
     @FXML private TableColumn<Item, String> name, sname;
     @FXML private TableColumn<Item, Double> value, svalue;
     @FXML private TableColumn<Item, Double> weight, sweight;
 
+    // Java logic
     private ObservableList<Item> items;
     private ObservableList<Item> selectedItems;
     private ItemsPool selectedItemsPool = new ItemsPool();
@@ -47,8 +58,9 @@ public class KnapsackController implements Initializable {
         sweight.setCellValueFactory(new PropertyValueFactory<Item, Double>("weight"));
         itemTable.setItems(items);
 
-        knapsackSize = 20.0;
-        knapsackCapacityField.setText("20");
+//        mutationSlider.setValue(0);
+//        mutationChanceLabel.textProperty().bind(new SimpleDoubleProperty(mutationSlider.getValue()).asString());
+//        targetIdenticalLabel.textProperty().bind(new SimpleDoubleProperty(targetIdenticalSlider.getValue()).asString());
     }
 
     @FXML protected void addItem() {
@@ -87,6 +99,10 @@ public class KnapsackController implements Initializable {
         }catch(IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML protected void updateMutationLabel() {
+        mutationChanceLabel.setText(Double.toString(mutationSlider.getValue()));
     }
 
     @FXML protected void returnToMainMenu() throws IOException {

@@ -24,12 +24,12 @@ public class ItemWindowController {
         else {
             Stage window = (Stage) addItemButton.getScene().getWindow();
             if (window.getTitle().equals("Add new item")) {
-                item = new Item(nameField.getText(), Double.parseDouble(valueField.getText()), Double.parseDouble(weightField.getText()));
+                item = new Item(nameField.getText(), Double.parseDouble(weightField.getText()), Double.parseDouble(valueField.getText()));
                 ItemManagementController.itemList.add(item);
                 ItemManagementController.itemsPool.addItem(item);
             }
             else{
-                item = new Item(nameField.getText(), Double.parseDouble(valueField.getText()), Double.parseDouble(weightField.getText()));
+                item = new Item(nameField.getText(), Double.parseDouble(weightField.getText()), Double.parseDouble(valueField.getText()));
                 ItemManagementController.itemList.set(index, item);
                 ItemManagementController.itemsPool.setItemAt(index,item);
             }

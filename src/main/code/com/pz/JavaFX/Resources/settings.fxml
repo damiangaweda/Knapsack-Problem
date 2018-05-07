@@ -37,14 +37,14 @@
             <Button fx:id="calculateButton" layoutX="250.0" layoutY="422.0" mnemonicParsing="false" onAction="#calculate" prefHeight="50.0" prefWidth="100.0" text="Calculate" />
             <Button fx:id="resetButton" layoutX="250.0" layoutY="522.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="100.0" text="Reset" />
             <Button fx:id="returnButton" layoutX="486.0" layoutY="552.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="30.0" prefWidth="90.0" text="Return" />
-            <TextField fx:id="populationSizeField" layoutX="80.0" layoutY="440.0" prefHeight="25.0" prefWidth="90.0" />
-            <Label alignment="BOTTOM_LEFT" layoutX="80.0" layoutY="418.0" prefHeight="17.0" prefWidth="90.0" text="Population size" />
-            <Slider fx:id="mutationSlider" layoutX="80.0" layoutY="492.0" prefHeight="14.0" prefWidth="90.0" />
-            <Label layoutX="80.0" layoutY="474.0" prefHeight="18.0" prefWidth="90.0" text="Mutation chance" />
-            <TextField fx:id="knapsackCapacityField" alignment="CENTER" layoutX="75.0" layoutY="556.0" prefHeight="25.0" prefWidth="100.0" />
-            <Label alignment="CENTER" layoutX="75.0" layoutY="533.0" prefHeight="17.0" prefWidth="100.0" text="Capacity" />
-            <Label alignment="CENTER" layoutX="80.0" layoutY="506.0" prefHeight="17.0" prefWidth="90.0" text="0%" />
-            <Label alignment="CENTER" layoutX="378.0" layoutY="432.0" prefHeight="17.0" prefWidth="200.0" text="Total value: 0" />
+            <TextField fx:id="populationSizeField" layoutX="80.0" layoutY="428.0" prefHeight="25.0" prefWidth="90.0" />
+            <Label layoutX="80.0" layoutY="405.0" prefHeight="17.0" prefWidth="90.0" text="Population size" />
+            <Slider fx:id="mutationSlider" layoutX="25.0" layoutY="490.0" prefHeight="14.0" prefWidth="90.0" />
+            <Label layoutX="25.0" layoutY="473.0" prefHeight="18.0" prefWidth="90.0" text="Mutation chance" />
+            <TextField fx:id="knapsackCapacityField" alignment="CENTER" layoutX="76.0" layoutY="567.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label alignment="CENTER" layoutX="76.0" layoutY="544.0" prefHeight="17.0" prefWidth="100.0" text="Capacity" />
+            <Label fx:id="mutationChanceLabel" alignment="CENTER" layoutX="25.0" layoutY="505.0" onMouseDragExited="#updateMutationLabel" onMouseExited="#updateMutationLabel" prefHeight="17.0" prefWidth="90.0" text="0%" />
+            <Label fx:id="totalValue" alignment="CENTER" layoutX="378.0" layoutY="423.0" prefHeight="17.0" prefWidth="202.0" text="Total value: 0" />
             <TableView fx:id="selectedItemTable" editable="true" layoutX="378.0" layoutY="47.0" prefHeight="351.0" prefWidth="202.0">
                <columns>
                   <TableColumn fx:id="sname" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Name" />
@@ -52,7 +52,11 @@
                   <TableColumn fx:id="sweight" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="Weight" />
                </columns>
             </TableView>
-            <Label alignment="CENTER" layoutX="378.0" layoutY="464.0" prefHeight="17.0" prefWidth="200.0" text="Total weight: 0" />
+            <Label fx:id="totalWeight" alignment="CENTER" layoutX="378.0" layoutY="445.0" prefHeight="17.0" prefWidth="202.0" text="Total weight: 0" />
+            <Slider fx:id="targetIdenticalSlider" layoutX="131.0" layoutY="490.0" max="80.0" prefHeight="14.0" prefWidth="90.0" />
+            <Label layoutX="135.0" layoutY="473.0" prefHeight="18.0" prefWidth="100.0" text="Target identical %" />
+            <Label fx:id="TargetIdenticalLabel" alignment="CENTER" layoutX="135.0" layoutY="505.0" prefHeight="17.0" prefWidth="90.0" text="0%" />
+            <Label fx:id="totalCount" alignment="CENTER" layoutX="378.0" layoutY="402.0" prefHeight="17.0" prefWidth="202.0" text="Total count: 0" />
          </children>
       </AnchorPane>
    </children>

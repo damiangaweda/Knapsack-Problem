@@ -36,23 +36,18 @@ public class ItemManagementController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         itemTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-
+        itemTable.setItems(itemList);
 
         name.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
         value.setCellValueFactory(new PropertyValueFactory<Item, Double>("value"));
         weight.setCellValueFactory(new PropertyValueFactory<Item, Double>("weight"));
-
     }
 
     @FXML
     protected void importItems() {
-
         ItemsPoolService.readFromFile(itemsPool);
-
         itemList.addAll(itemsPool.getPool());
-
         itemTable.setItems(itemList);
-
         alertWindow("Import", "Items has been imported!");
     }
 
@@ -60,7 +55,6 @@ public class ItemManagementController implements Initializable {
     protected void exportItems() {
 
         ItemsPoolService.saveToFile(itemsPool);
-
         alertWindow("Export", "Your items were successfully saved!");
     }
 
@@ -88,9 +82,10 @@ public class ItemManagementController implements Initializable {
         Item selectedIndex = itemTable.getSelectionModel().getSelectedItem();
         if (selectedIndex == null)
             alertWindow("Error", "You haven't selected anything");
-        else
+        else {
             itemTable.getItems().remove(selectedIndex);
             itemsPool.removeItem(selectedIndex);
+        }
     }
 
     private void popupWindow(String title) {
