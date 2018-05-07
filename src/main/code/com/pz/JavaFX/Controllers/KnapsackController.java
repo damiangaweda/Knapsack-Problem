@@ -2,10 +2,8 @@ package com.pz.JavaFX.Controllers;
 
 import com.pz.Models.Item;
 import com.pz.Models.ItemsPool;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import com.pz.Models.Knapsack;
+import com.pz.Models.Population;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -18,10 +16,13 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import com.pz.Services.GeneticAlgorithm;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static com.pz.JavaFX.Controllers.ItemManagementController.alertWindow;
 
 public class KnapsackController implements Initializable {
     //  FXML Interface
@@ -51,6 +52,8 @@ public class KnapsackController implements Initializable {
     private Integer populationSize, mutationChance, targetIdentical;
     private Double knapsackSize;
 
+    public static Knapsack result;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         items = ItemManagementController.itemList;
@@ -69,7 +72,6 @@ public class KnapsackController implements Initializable {
                                 Number old_val, Number new_val) {
                 mutationChanceLabel.setText(String.format("%d", new_val.intValue()) + "%");
                 mutationChance = new_val.intValue();
-                System.out.println("Mutation chance: " + mutationChance);
             }
         });
         targetIdenticalSlider.valueProperty().addListener(new ChangeListener<Number>() {
@@ -77,23 +79,32 @@ public class KnapsackController implements Initializable {
                                 Number old_val, Number new_val) {
                 TargetIdenticalLabel.setText(String.format("%d", new_val.intValue()) + "%");
                 targetIdentical = new_val.intValue();
-                System.out.println("Target Identical %: " + targetIdentical);
             }
         });
         populationSizeField.textProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> ov,
                                 String old_val, String new_val) {
                 if (new_val.isEmpty())  return;
+                if (!new_val.matches("^[0-9]*$")) {
+                    populationSizeField.setStyle("-fx-text-fill: red;");
+                    populationSize = 0;
+                    return;
+                }
+                populationSizeField.setStyle("-fx-text-fill: black;");
                 populationSize = Integer.valueOf(new_val);
-                System.out.println("Population size: " + populationSize);
             }
         });
         knapsackCapacityField.textProperty().addListener(new ChangeListener<String>() {
             public void changed(ObservableValue<? extends String> ov,
                                 String old_val, String new_val) {
                 if (new_val.isEmpty())  return;
+                if (!new_val.matches("^[0-9]*$")) {
+                    knapsackCapacityField.setStyle("-fx-text-fill: red;");
+                    knapsackSize = 0.0;
+                    return;
+                }
+                knapsackCapacityField.setStyle("-fx-text-fill: black;");
                 knapsackSize = Double.valueOf(new_val);
-                System.out.println("Knapsack size: " + knapsackSize);
             }
         });
     }
@@ -134,6 +145,12 @@ public class KnapsackController implements Initializable {
     }
 
     @FXML protected void calculate() {
+        if (selectedItemsPool.getPoolSize() <= 0 || populationSize <= 0 || knapsackSize <= 0) {
+            alertWindow("Error", "Please fill out all fields");
+            return;
+        }
+
+        result = new GeneticAlgorithm().getAnswer(new Population(populationSize, knapsackSize, mutationChance, selectedItemsPool), targetIdentical);
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Resources/results.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();

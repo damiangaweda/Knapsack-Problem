@@ -45,6 +45,7 @@ public class ItemManagementController implements Initializable {
 
     @FXML
     protected void importItems() {
+        itemList.removeAll(itemList);
         ItemsPoolService.readFromFile(itemsPool);
         itemList.addAll(itemsPool.getPool());
         itemTable.setItems(itemList);

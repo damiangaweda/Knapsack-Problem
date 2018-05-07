@@ -1,6 +1,10 @@
 package com.pz.JavaFX.Controllers;
 
 import com.pz.Models.Item;
+import com.pz.Models.ItemsPool;
+import com.pz.Models.Knapsack;
+import com.pz.Models.Population;
+import com.pz.Services.GeneticAlgorithm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,6 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.pz.JavaFX.Controllers.KnapsackController.result;
 import static com.pz.JavaFX.Controllers.KnapsackController.selectedItemsPool;
 
 public class ResultsController implements Initializable {
@@ -32,23 +37,20 @@ public class ResultsController implements Initializable {
 
     public static ObservableList<Item> itemList = FXCollections.observableArrayList();
 
-    // Change this to population best score
-    private Double bestScore = 115.0;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        itemList.add(new Item("Item Name 1", 1.0, 1.0));
-        itemList.add(new Item("Item Name 2", 2.0, 2.0));
+        itemList.removeAll(itemList);
+        itemList.addAll(result.getItemsList());
 
         name.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
         value.setCellValueFactory(new PropertyValueFactory<Item, Double>("value"));
         weight.setCellValueFactory(new PropertyValueFactory<Item, Double>("weight"));
         resultTable.setItems(itemList);
 
-        scoreField.setText(bestScore.toString());
-        totalCount.setText(Integer.toString(selectedItemsPool.getCount()));
-        totalValue.setText(String.format("%.2f", selectedItemsPool.getValue()));
-        totalWeight.setText(String.format("%.2f", selectedItemsPool.getWeight()));
+        scoreField.setText(String.format("%.2f", result.getAdaptationScore()));
+        totalCount.setText(Integer.toString(result.getItemsList().size()));
+        totalValue.setText(String.format("%.2f", result.getTotalValue()));
+        totalWeight.setText(String.format("%.2f", result.getTotalWeight()));
     }
 
     @FXML

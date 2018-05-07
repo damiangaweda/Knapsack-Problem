@@ -3,7 +3,7 @@ package com.pz.Services
 import com.pz.Models.Knapsack
 import com.pz.Models.Population
 
-class GeneticAlgorithm {
+public class GeneticAlgorithm {
 
 
     fun getAnswer(population: Population, samePercent: Int): Knapsack
