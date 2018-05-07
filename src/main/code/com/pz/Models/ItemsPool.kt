@@ -8,14 +8,12 @@ class ItemsPool {
 
     fun addItem(item: Item)
     {
-        if(!pool.contains(item))
-        {
             pool.add(item)
-        }
-        else
-        {
-            println("item already in pool")
-        }
+    }
+
+    fun addItems(items: MutableList<Item>)
+    {
+        items.forEach { e -> addItem(e) }
     }
 
     fun removeItem(item: Item)
@@ -28,6 +26,10 @@ class ItemsPool {
         {
             println("no such item in pool")
         }
+    }
+
+    fun clearItems() {
+        pool.clear()
     }
 
     fun getItemAt(index: Int): Item

@@ -1,6 +1,7 @@
 package com.pz.JavaFX.Controllers;
 
 import com.pz.Models.Item;
+import com.pz.Models.ItemsPool;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,6 +32,7 @@ public class KnapsackController implements Initializable {
 
     private ObservableList<Item> items;
     private ObservableList<Item> selectedItems;
+    private ItemsPool selectedItemsPool = new ItemsPool();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -51,20 +53,23 @@ public class KnapsackController implements Initializable {
 
     @FXML protected void addItem() {
         selectedItems = selectedItemTable.getItems();
-        ObservableList<Item> item = itemTable.getSelectionModel().getSelectedItems();
-        selectedItems.addAll(item);
+        ObservableList<Item> selectedItems = itemTable.getSelectionModel().getSelectedItems();
+        this.selectedItems.addAll(selectedItems);
+        selectedItemsPool.addItems(selectedItems);
     }
 
     @FXML protected void removeItem() {
         selectedItems = selectedItemTable.getSelectionModel().getSelectedItems();
         for (Item selected : selectedItems) {
             selectedItemTable.getItems().remove(selected);
+            selectedItemsPool.removeItem(selected);
         }
     }
 
     @FXML protected void reset(){
         selectedItems = selectedItemTable.getItems();
         selectedItems.clear();
+        selectedItemsPool.clearItems();
 
         itemTable.getSelectionModel().clearSelection();
     }
