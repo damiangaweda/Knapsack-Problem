@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainController{
+public class MainController {
 
     @FXML private Button startButton, itemDatabaseButton, exitButton;
 

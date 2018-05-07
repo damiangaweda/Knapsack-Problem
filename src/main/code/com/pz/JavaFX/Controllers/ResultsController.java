@@ -1,10 +1,6 @@
 package com.pz.JavaFX.Controllers;
 
 import com.pz.Models.Item;
-import com.pz.Models.ItemsPool;
-import com.pz.Models.Knapsack;
-import com.pz.Models.Population;
-import com.pz.Services.GeneticAlgorithm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -21,7 +17,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.pz.JavaFX.Controllers.KnapsackController.result;
-import static com.pz.JavaFX.Controllers.KnapsackController.selectedItemsPool;
 
 public class ResultsController implements Initializable {
 
