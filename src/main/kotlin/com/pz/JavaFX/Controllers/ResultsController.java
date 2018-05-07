@@ -1,5 +1,6 @@
-package Controllers;
+package com.pz.JavaFX.Controllers;
 
+import com.pz.Models.Item;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
