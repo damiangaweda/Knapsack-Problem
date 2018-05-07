@@ -82,6 +82,10 @@ class Knapsack constructor(val maxCapacity: Double)
         items.forEach { e -> println(e) }
     }
 
+    fun getItemsList(): MutableList<Item> {
+        return items;
+    }
+
     fun set(other: Knapsack) {
         this.adaptationScore = other.adaptationScore
         this.items = other.items

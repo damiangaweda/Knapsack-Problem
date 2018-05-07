@@ -18,7 +18,7 @@ class GeneticAlgorithm {
 
         while (true){
 
-            population.printPopulation()
+            //population.printPopulation()
             /*
                 Reassembling population
                     - rating
