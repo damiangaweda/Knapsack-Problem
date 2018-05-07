@@ -42,8 +42,8 @@
             <Slider fx:id="mutationSlider" layoutX="25.0" layoutY="490.0" prefHeight="14.0" prefWidth="90.0" />
             <Label layoutX="25.0" layoutY="473.0" prefHeight="18.0" prefWidth="90.0" text="Mutation chance" />
             <TextField fx:id="knapsackCapacityField" alignment="CENTER" layoutX="76.0" layoutY="567.0" prefHeight="25.0" prefWidth="100.0" />
-            <Label alignment="CENTER" layoutX="76.0" layoutY="544.0" prefHeight="17.0" prefWidth="100.0" text="Capacity" />
-            <Label fx:id="mutationChanceLabel" alignment="CENTER" layoutX="25.0" layoutY="505.0" onMouseDragExited="#updateMutationLabel" onMouseExited="#updateMutationLabel" prefHeight="17.0" prefWidth="90.0" text="0%" />
+            <Label alignment="CENTER" layoutX="76.0" layoutY="544.0" prefHeight="17.0" prefWidth="100.0" text="Max capacity" />
+            <Label fx:id="mutationChanceLabel" alignment="CENTER" layoutX="25.0" layoutY="505.0" prefHeight="17.0" prefWidth="90.0" text="0%" />
             <Label fx:id="totalValue" alignment="CENTER" layoutX="378.0" layoutY="423.0" prefHeight="17.0" prefWidth="202.0" text="Total value: 0" />
             <TableView fx:id="selectedItemTable" editable="true" layoutX="378.0" layoutY="47.0" prefHeight="351.0" prefWidth="202.0">
                <columns>
