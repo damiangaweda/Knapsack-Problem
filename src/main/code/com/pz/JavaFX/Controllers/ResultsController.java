@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.pz.JavaFX.Controllers.KnapsackController.selectedItemsPool;
+
 public class ResultsController implements Initializable {
 
     @FXML private Button returnButton, showAllButton;
@@ -25,6 +27,8 @@ public class ResultsController implements Initializable {
     @FXML private TableColumn<Item, String> name;
     @FXML private TableColumn<Item, Double> value;
     @FXML private TableColumn<Item, Double> weight;
+
+    @FXML private Label totalCount, totalValue, totalWeight;
 
     public static ObservableList<Item> itemList = FXCollections.observableArrayList();
 
@@ -42,6 +46,9 @@ public class ResultsController implements Initializable {
         resultTable.setItems(itemList);
 
         scoreField.setText(bestScore.toString());
+        totalCount.setText(Integer.toString(selectedItemsPool.getCount()));
+        totalValue.setText(String.format("%.2f", selectedItemsPool.getValue()));
+        totalWeight.setText(String.format("%.2f", selectedItemsPool.getWeight()));
     }
 
     @FXML

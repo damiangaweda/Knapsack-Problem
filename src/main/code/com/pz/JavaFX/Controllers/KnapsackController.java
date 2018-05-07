@@ -24,7 +24,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class KnapsackController implements Initializable {
-//  FXML Interface
+    //  FXML Interface
 //  Buttons
     @FXML private Button addItemButton, removeItemButton;
     @FXML private Button calculateButton, resetButton, returnButton;
@@ -46,7 +46,7 @@ public class KnapsackController implements Initializable {
     // Java logic
     private ObservableList<Item> items;
     private ObservableList<Item> selectedItems;
-    private ItemsPool selectedItemsPool = new ItemsPool();
+    public static ItemsPool selectedItemsPool = new ItemsPool();
 
     private Integer populationSize, mutationChance, targetIdentical;
     private Double knapsackSize;

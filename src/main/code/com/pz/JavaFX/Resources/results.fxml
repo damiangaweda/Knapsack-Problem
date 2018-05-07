@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pz.JavaFX.Controllers.ResultsController">
-   <Label alignment="CENTER" layoutX="135.0" layoutY="1.0" text="Best result">
-      <font>
-         <Font size="18.0" />
-      </font>
-   </Label>
+    <Label alignment="CENTER" layoutX="135.0" layoutY="1.0" text="Best result">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
 
     <TableView fx:id="resultTable" editable="true" layoutX="25.0" layoutY="28.0" prefHeight="340.0" prefWidth="302.0">
         <columns>
@@ -22,12 +22,18 @@
             <TableColumn fx:id="weight" maxWidth="75.0" minWidth="50.0" prefWidth="75.0" resizable="false" text="Weight" />
         </columns>
     </TableView>
-   <Label layoutX="156.0" layoutY="376.0" text="Score">
-      <font>
-         <Font size="16.0" />
-      </font>
-   </Label>
-   <TextField fx:id="scoreField" alignment="CENTER" editable="false" layoutX="101.0" layoutY="401.0" />
-   <Button fx:id="returnButton" layoutX="126.0" layoutY="456.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="100.0" text="Return" />
-   <Button fx:id="showAllButton" layoutX="275.0" layoutY="459.0" mnemonicParsing="false" onAction="#showAll" text="Show all" />
+    <Label layoutX="156.0" layoutY="376.0" text="Score">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <TextField fx:id="scoreField" alignment="CENTER" editable="false" layoutX="125.0" layoutY="401.0" prefWidth="100.0" />
+    <Button fx:id="returnButton" layoutX="126.0" layoutY="456.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="100.0" text="Return" />
+    <Button fx:id="showAllButton" layoutX="275.0" layoutY="459.0" mnemonicParsing="false" onAction="#showAll" text="Show all" />
+    <Label alignment="CENTER" layoutX="15.0" layoutY="370.0" prefWidth="75.0" text="Total Count" />
+    <Label fx:id="totalCount" alignment="CENTER" layoutX="15.0" layoutY="387.0" prefWidth="75.0" text="0" />
+    <Label alignment="CENTER" layoutX="15.0" layoutY="409.0" prefWidth="75.0" text="Total value" />
+    <Label fx:id="totalValue" alignment="CENTER" layoutX="15.0" layoutY="426.0" prefWidth="75.0" text="0" />
+    <Label alignment="CENTER" layoutX="15.0" layoutY="454.0" prefWidth="75.0" text="Total weight" />
+    <Label fx:id="totalWeight" alignment="CENTER" layoutX="15.0" layoutY="471.0" prefWidth="75.0" text="0" />
 </AnchorPane>
