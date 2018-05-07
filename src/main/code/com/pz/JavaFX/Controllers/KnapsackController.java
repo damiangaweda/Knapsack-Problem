@@ -68,6 +68,10 @@ public class KnapsackController implements Initializable {
         ObservableList<Item> selectedItems = itemTable.getSelectionModel().getSelectedItems();
         this.selectedItems.addAll(selectedItems);
         selectedItemsPool.addItems(selectedItems);
+
+        totalCount.setText("Total count: " + Integer.toString(selectedItemsPool.getCount()));
+        totalValue.setText("Total value: " + String.format("%.2f", selectedItemsPool.getValue()));
+        totalWeight.setText("Total weight: " + String.format("%.2f", selectedItemsPool.getWeight()));
     }
 
     @FXML protected void removeItem() {
@@ -75,6 +79,10 @@ public class KnapsackController implements Initializable {
         for (Item selected : selectedItems) {
             selectedItemTable.getItems().remove(selected);
             selectedItemsPool.removeItem(selected);
+
+            totalCount.setText("Total count: " + Integer.toString(selectedItemsPool.getCount()));
+            totalValue.setText("Total value: " + String.format("%.2f", selectedItemsPool.getValue()));
+            totalWeight.setText("Total weight: " + String.format("%.2f", selectedItemsPool.getWeight()));
         }
     }
 
@@ -82,6 +90,10 @@ public class KnapsackController implements Initializable {
         selectedItems = selectedItemTable.getItems();
         selectedItems.clear();
         selectedItemsPool.clearItems();
+
+        totalCount.setText("Total count: 0");
+        totalValue.setText("Total value: 0");
+        totalWeight.setText("Total weight: 0");
 
         itemTable.getSelectionModel().clearSelection();
     }
