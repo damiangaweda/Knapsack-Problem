@@ -1,6 +1,8 @@
 package com.pz.JavaFX.Controllers;
 
 import com.pz.Models.Item;
+import com.pz.Models.ItemsPool;
+import com.pz.Services.ItemsPoolService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,37 +29,46 @@ public class ItemManagementController implements Initializable {
     @FXML private TableColumn<Item, Double> value;
     @FXML private TableColumn<Item, Double> weight;
 
+    public static ItemsPool itemsPool = new ItemsPool();
+
     public static ObservableList<Item> itemList = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         itemTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        itemList.add(new Item("itemName1", 10.0, 10.0));
-        itemList.add(new Item("itemName2", 20.0, 20.0));
-        itemList.add(new Item("itemName3", 30.0, 30.0));
-        itemList.add(new Item("itemName4", 40.0, 40.0));
-        itemList.add(new Item("itemName5", 50.0, 50.0));
 
         name.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
         value.setCellValueFactory(new PropertyValueFactory<Item, Double>("value"));
         weight.setCellValueFactory(new PropertyValueFactory<Item, Double>("weight"));
-        itemTable.setItems(itemList);
+
     }
 
     @FXML
     protected void importItems() {
-        alertWindow("Error", "Feature not available yet!");
+
+        ItemsPoolService.readFromFile(itemsPool);
+
+        itemList.addAll(itemsPool.getPool());
+
+        itemTable.setItems(itemList);
+
+        alertWindow("Import", "Items has been imported!");
     }
 
     @FXML
     protected void exportItems() {
-        alertWindow("Error", "Feature not available yet!");
+
+        ItemsPoolService.saveToFile(itemsPool);
+
+        alertWindow("Export", "Your items were successfully saved!");
     }
 
     @FXML
     protected void addItem() {
         popupWindow("Add new item");
+        itemTable.setItems(itemList);
+        System.out.println(itemsPool.getPoolSize());
     }
 
     @FXML
@@ -79,6 +90,7 @@ public class ItemManagementController implements Initializable {
             alertWindow("Error", "You haven't selected anything");
         else
             itemTable.getItems().remove(selectedIndex);
+            itemsPool.removeItem(selectedIndex);
     }
 
     private void popupWindow(String title) {

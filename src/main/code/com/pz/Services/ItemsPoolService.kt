@@ -12,25 +12,31 @@ import java.io.BufferedReader
 
 class ItemsPoolService {
 
-    fun saveToFile(itemsPool: ItemsPool) {
-        val gsonObj = Gson().toJson(itemsPool.getPool())
+    companion object {
 
-        File("itemsPool.json").printWriter().use { out -> out.println(gsonObj) }
+        @JvmStatic
+        fun saveToFile(itemsPool: ItemsPool) {
+            val gsonObj = Gson().toJson(itemsPool.getPool())
 
-        /** TEST  */
-        println(gsonObj)
+            File("itemsPool.json").printWriter().use { out -> out.println(gsonObj) }
+
+            /** TEST  */
+            //println(gsonObj)
+        }
+
+        @JvmStatic
+        fun readFromFile(itemsPool: ItemsPool){
+            val path = "itemsPool.json"
+            val bufferedReader = BufferedReader(FileReader(path))
+
+            val gson = Gson()
+            val json: MutableList<Item> = gson.fromJson(bufferedReader)
+
+            itemsPool.setPool(json)
+
+            /** TEST  */
+            //itemsPool.printPool()
+        }
     }
 
-    fun readFromFile(itemsPool: ItemsPool){
-        val path = "itemsPool.json"
-        val bufferedReader = BufferedReader(FileReader(path))
-
-        val gson = Gson()
-        val json: MutableList<Item> = gson.fromJson(bufferedReader)
-
-        itemsPool.setPool(json)
-
-        /** TEST  */
-        itemsPool.printPool()
-    }
 }

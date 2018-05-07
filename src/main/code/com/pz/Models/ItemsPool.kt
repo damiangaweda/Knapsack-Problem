@@ -1,5 +1,7 @@
 package com.pz.Models
 
+import javafx.collections.ObservableArray
+
 class ItemsPool {
 
     private var pool = mutableListOf<Item>()
@@ -31,6 +33,10 @@ class ItemsPool {
     fun getItemAt(index: Int): Item
     {
         return pool.get(index)
+    }
+
+    fun setItemAt(index: Int, item: Item) {
+        pool[index] = item
     }
 
     fun getPoolSize(): Int
