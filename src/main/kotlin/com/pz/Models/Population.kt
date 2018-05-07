@@ -76,6 +76,8 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
      * Dodać dodawanie najlżejszych przedmiotów na samym końcu
      */
 
+
+
     fun crossover(A: Knapsack, B: Knapsack): Knapsack
     {
         val middleIndexA: Int = (0..A.items.size).random()
@@ -86,13 +88,13 @@ class Population constructor(private var maxSize: Int, var knapsackMaxWeight: Do
         for(i in 0 until middleIndexA)
             C.addItem(A.items[i])
 
-        //while ( middleIndexB < B.items.size && (C.totalWeight + B.items[middleIndexB].weight) <= C.maxCapacity ){
-        //   C.addItem(B.items[middleIndexB++])
-        //}
-
-        while ( middleIndexB < B.items.size && C.totalWeight <= C.maxCapacity ){
-            C.addItem(B.items[middleIndexB++])
+        while ( middleIndexB < B.items.size && (C.totalWeight + B.items[middleIndexB].weight) <= C.maxCapacity ){
+           C.addItem(B.items[middleIndexB++])
         }
+
+        //while ( middleIndexB < B.items.size && C.totalWeight <= C.maxCapacity ){
+        //    C.addItem(B.items[middleIndexB++])
+        //}
 
         return  C
     }

@@ -5,10 +5,8 @@ import com.pz.Models.Population
 
 class GeneticAlgorithm {
 
-    val history = mutableListOf<Knapsack>()
-    val historySize = 10
 
-    fun getAnswer(population: Population): Knapsack
+    fun getAnswer(population: Population, samePercent: Int): Knapsack
     {
         //setting population to random
         population.setRandom()
@@ -31,7 +29,9 @@ class GeneticAlgorithm {
 
             //finding current best
 
+
             currentBest = population.findBest()
+            /*
             if(currentBest.adaptationScore > best.adaptationScore && currentBest.totalWeight <= currentBest.maxCapacity) {
 
                 best.set(currentBest)
@@ -46,7 +46,14 @@ class GeneticAlgorithm {
             else {
                 return best
             }
+            */
 
+            if(currentBest.adaptationScore > best.adaptationScore && currentBest.totalWeight <= currentBest.maxCapacity) {
+                best.set(currentBest)
+            }
+
+            if(population.identicalPercentage() >= samePercent)
+                return best
 
         }
 

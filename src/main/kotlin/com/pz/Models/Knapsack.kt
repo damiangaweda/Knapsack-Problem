@@ -64,10 +64,9 @@ class Knapsack constructor(val maxCapacity: Double)
         adaptationScore = totalValue/maxCapacity
         val difference = maxCapacity - totalWeight
         if(difference < 0)
-            adaptationScore += difference
+            adaptationScore += difference*2
         if(difference == 0.0)
             adaptationScore += totalValue/10
-
     }
 
     override fun toString(): String {

@@ -33,14 +33,14 @@ fun main(args: Array<String>) {
     itemsPool.addItem(Item("Item7",5.0,20.0))
     itemsPool.addItem(Item("Item8",1.0,3.05))
     itemsPool.addItem(Item("Item9",2.5,17.0))
-
+    //itemsPool.addItem(Item("Item9",0.4,5.0))
     //val itemsService = ItemsPoolService()
     //itemsService.saveToFile(itemsPool)
     //itemsService.readFromFile(itemsPool)
 
     val population = Population(100,20.0,1,itemsPool)
 
-    val answer = GeneticAlgorithm().getAnswer(population)
+    val answer = GeneticAlgorithm().getAnswer(population,75)
     println("Result: $answer")
     answer.print()
 
